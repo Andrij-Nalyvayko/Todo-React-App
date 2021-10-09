@@ -26,11 +26,15 @@ let todos: Todo[] = [
   },
 ];
 
+interface Filter {
+  filter: string | boolean;
+}
+
 const App: React.FC = () => {
   const [toDo, setToDo] = useState(todos);
   const [textDone, setTextDone] = useState('');
   const [edit, setEdit] = useState(0);
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState<string | boolean>('');
   const [editText, setEditText] = useState('');
 
   todos = toDo;
@@ -115,11 +119,11 @@ const App: React.FC = () => {
             <ul className="filters">
               <button
                 type="button"
-                onClick={() => setFilter('All')}
+                onClick={() => setFilter('')}
               >
                 <a
                   href="#/"
-                  className={classNames({ selected: filter === 'All' })}
+                  className={classNames({ selected: filter === '' })}
                 >
                   All
                 </a>
@@ -127,23 +131,23 @@ const App: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => setFilter('Active')}
+                onClick={() => setFilter(true)}
               >
                 <a
                   href="#/active"
-                  className={classNames({ selected: filter === 'Active' })}
+                  className={classNames({ selected: filter === true })}
                 >
                   Active
                 </a>
               </button>
 
               <button
-                onClick={() => setFilter('Completed')}
+                onClick={() => setFilter(false)}
                 type="button"
               >
                 <a
                   href="#/completed"
-                  className={classNames({ selected: filter === 'Completed' })}
+                  className={classNames({ selected: filter === false })}
                 >
                   Completed
                 </a>

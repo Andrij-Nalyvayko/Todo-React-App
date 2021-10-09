@@ -15,7 +15,7 @@ type Props = {
   edit?: number,
   setEdit?: any,
   todos: Todo[],
-  filter?: string,
+  filter?: string | boolean,
 }
 
 export const TodoList: React.FC<Props> = ({
