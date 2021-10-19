@@ -1,5 +1,5 @@
 # React ToDo App
-Links to the [DEMO](https://Andrij-Nalyvayko.github.io/react_todo-app/)
+Links to the [DEMO](https://andrij-nalyvayko.github.io/Todo-React-App)
 
 - Stack technologies: JS, REACT, TypeScript, HTML, SASS;
 - Features: application which can add new or delete old tasks, mark done and sort of 'All', 'Completed', 'Active';
