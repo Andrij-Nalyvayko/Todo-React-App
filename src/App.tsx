@@ -131,23 +131,23 @@ const App: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => setFilter(true)}
+                onClick={() => setFilter(false)}
               >
                 <a
                   href="#/active"
-                  className={classNames({ selected: filter === true })}
+                  className={classNames({ selected: filter === false })}
                 >
                   Active
                 </a>
               </button>
 
               <button
-                onClick={() => setFilter(false)}
+                onClick={() => setFilter(true)}
                 type="button"
               >
                 <a
                   href="#/completed"
-                  className={classNames({ selected: filter === false })}
+                  className={classNames({ selected: filter === true })}
                 >
                   Completed
                 </a>
